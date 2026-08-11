@@ -21,7 +21,7 @@ Programming philosophy (content ≠ runtime):
 
 | Ecosystem project | Role | Status |
 | --- | --- | --- |
-| [Drenyra App Web](https://github.com/arkelythex/drenyra-app-web) | Command Center (consumes) | In development (private) |
+| [Drenyra Command Center](https://github.com/arkelythex/drenyra-command-center) | Command Center (consumes) | In development (private) |
 | [Drenyra AI](https://github.com/arkelythex/drenyra-ai) | Verifiable core (consumes skills) | Pre-alpha |
 | [Drenyra Pi](https://github.com/arkelythex/drenyra-pi) | Pi-native harness (consumes, pinned) | Pre-alpha |
 | [Drenyra Engram](https://github.com/arkelythex/drenyra-engram) | Institutional memory (used) | Pre-alpha |
