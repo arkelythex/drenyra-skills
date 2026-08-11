@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Drenyra Skills registry manifest",
+  "description": "Authoring source of truth for skill definitions. Conformance: drenyra-ai ships BASE_PE_SKILLS matching this manifest (ids, versions, jurisdiction, maxAutonomy, normativeSources, inputs, outputs); any drift fails CI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["description", "skills"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "version", "jurisdiction", "maxAutonomy", "normativeSources", "inputs", "outputs"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*$" },
+          "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+          "jurisdiction": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "maxAutonomy": { "type": "string", "enum": ["R0", "R1", "R2", "R3"] },
+          "normativeSources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "inputs": { "type": "array", "items": { "type": "string" } },
+          "outputs": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "minItems": 1
+    }
+  }
+}

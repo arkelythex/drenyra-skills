@@ -38,16 +38,21 @@ with a schema, not code.
 ```text
 skills/                       versioned knowledge (the content)
   _template/                  skill format template + validation contract
-  <domain>/<jurisdiction>/    e.g. tax/pe, close/monthly-close
+  registry.json               manifest — authoring source of skill definitions
+  registry.schema.json        manifest contract (draft-07)
+  <domain>/<jurisdiction>/    e.g. pe/igv-validate.md
     <topic>.md                one skill = one versioned document
-registry.schema.json          machine-readable skill manifest contract
 LICENSE                       proprietary, © Arkelythex
 ```
 
-The skill format (frontmatter + body) is defined in
-[`skills/_template/skill.template.md`](skills/_template/skill.template.md).
-Versioning follows the ecosystem convention: skills are immutable once
-referenced; updates are new versions, never in-place edits to frozen content.
+**Ownership model (slice 3 of `drenyra-ecosystem-cleanup`):**
+`registry.json` here is the **authoring source of truth** for the skill
+registry. `drenyra-ai` ships the runtime copy (`BASE_PE_SKILLS` in
+`skills/pe.ts`) as part of its standalone `./skills` public surface — it must
+stay self-contained and never depend on this repo. `bun run skills:conformance`
+in `drenyra-ai` fails CI on any drift between this manifest and the shipped
+runtime. Long-form knowledge docs (`skills/<domain>/<jurisdiction>/`) are
+authored here against their normative sources.
 
 ## Brand
 

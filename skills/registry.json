@@ -1,0 +1,60 @@
+{
+  "$schema": "registry.schema.json",
+  "description": "Drenyra Skills registry manifest — the authoring source of truth for skill definitions. drenyra-ai ships a copy of these ids/versions in its runtime registry (BASE_PE_SKILLS); scripts/skills-conformance.mjs in drenyra-ai fails CI on any drift between this manifest and the shipped registry.",
+  "skills": [
+    {
+      "id": "pe.igv-validate",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": ["TUO IGV — D.S. 055-99-EF"],
+      "inputs": ["invoice", "tax-period"],
+      "outputs": ["igv-validation"]
+    },
+    {
+      "id": "pe.sire-compare",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": ["SUNAT SIRE — R.S. 085-2020/SUNAT"],
+      "inputs": ["sire-proposal", "ledger"],
+      "outputs": ["exceptions", "candidates"]
+    },
+    {
+      "id": "pe.detraction-check",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": ["D.S. 155-98-EF (detracciones)"],
+      "inputs": ["operation", "period"],
+      "outputs": ["detraction-validation"]
+    },
+    {
+      "id": "pe.retention-check",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": ["D.S. 56-97-EF (retenciones del IGV)"],
+      "inputs": ["operation", "supplier", "period"],
+      "outputs": ["retention-validation"]
+    },
+    {
+      "id": "pe.perception-check",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": ["D.S. 122-94-EF (percepciones del IGV)"],
+      "inputs": ["operation", "customer", "period"],
+      "outputs": ["perception-validation"]
+    },
+    {
+      "id": "pe.sire-filing",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R2",
+      "normativeSources": ["SUNAT SIRE — R.S. 085-2020/SUNAT"],
+      "inputs": ["sire-proposal", "ledger", "period"],
+      "outputs": ["filing-readiness", "exceptions"]
+    }
+  ]
+}
