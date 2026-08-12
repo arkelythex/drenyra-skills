@@ -33,6 +33,25 @@ Programming philosophy (content ≠ runtime):
 repo never depends on `drenyra-ai` internals; a skill is a versioned document
 with a schema, not code.
 
+### Drenyra Dominion Program
+
+Drenyra Skills is one vertical inside the
+[Drenyra Dominion Program](https://github.com/arkelythex/drenyra-ai/tree/main/openspec/programs/drenyra-dominion),
+the federated program master that fixes vision, authority, contracts,
+dependencies, gates, and sequencing across every Drenyra repository. A single
+master SDD governs the ecosystem; implementable vertical SDDs deliver complete
+capabilities that may traverse the repositories they need while each
+repository preserves its own ownership and boundaries.
+
+| Program vertical | This repo's role |
+| --- | --- |
+| [SDD-070 — Skills and Policy Supply Chain](https://github.com/arkelythex/drenyra-ai/tree/main/openspec/programs/drenyra-dominion/sdds/sdd-070-skills) | Skills and policy supply chain: versioned fiscal skills, normative sources, vigencia, checksum, signature, rollback |
+| SDD-050 — Peruvian Monthly Close | Feeds — the close journey consumes pinned skills and policies |
+
+**Immutability rule:** skills are immutable during a mission — updates affect
+new missions, never rewrite the past. **Content rule:** skills are content,
+never authority.
+
 ## Structure
 
 ```text
