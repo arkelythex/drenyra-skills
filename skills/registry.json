@@ -7,54 +7,196 @@
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
-      "normativeSources": ["TUO IGV — D.S. 055-99-EF"],
-      "inputs": ["invoice", "tax-period"],
-      "outputs": ["igv-validation"]
+      "normativeSources": [
+        "TUO IGV — D.S. 055-99-EF"
+      ],
+      "inputs": [
+        "invoice",
+        "tax-period"
+      ],
+      "outputs": [
+        "igv-validation"
+      ]
     },
     {
       "id": "pe.sire-compare",
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
-      "normativeSources": ["SUNAT SIRE — R.S. 085-2020/SUNAT"],
-      "inputs": ["sire-proposal", "ledger"],
-      "outputs": ["exceptions", "candidates"]
+      "normativeSources": [
+        "SUNAT SIRE — R.S. 085-2020/SUNAT"
+      ],
+      "inputs": [
+        "sire-proposal",
+        "ledger"
+      ],
+      "outputs": [
+        "exceptions",
+        "candidates"
+      ]
     },
     {
       "id": "pe.detraction-check",
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
-      "normativeSources": ["D.S. 155-98-EF (detracciones)"],
-      "inputs": ["operation", "period"],
-      "outputs": ["detraction-validation"]
+      "normativeSources": [
+        "D.S. 155-98-EF (detracciones)"
+      ],
+      "inputs": [
+        "operation",
+        "period"
+      ],
+      "outputs": [
+        "detraction-validation"
+      ]
     },
     {
       "id": "pe.retention-check",
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
-      "normativeSources": ["D.S. 56-97-EF (retenciones del IGV)"],
-      "inputs": ["operation", "supplier", "period"],
-      "outputs": ["retention-validation"]
+      "normativeSources": [
+        "D.S. 56-97-EF (retenciones del IGV)"
+      ],
+      "inputs": [
+        "operation",
+        "supplier",
+        "period"
+      ],
+      "outputs": [
+        "retention-validation"
+      ]
     },
     {
       "id": "pe.perception-check",
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
-      "normativeSources": ["D.S. 122-94-EF (percepciones del IGV)"],
-      "inputs": ["operation", "customer", "period"],
-      "outputs": ["perception-validation"]
+      "normativeSources": [
+        "D.S. 122-94-EF (percepciones del IGV)"
+      ],
+      "inputs": [
+        "operation",
+        "customer",
+        "period"
+      ],
+      "outputs": [
+        "perception-validation"
+      ]
     },
     {
       "id": "pe.sire-filing",
       "version": "1.0.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R2",
-      "normativeSources": ["SUNAT SIRE — R.S. 085-2020/SUNAT"],
-      "inputs": ["sire-proposal", "ledger", "period"],
-      "outputs": ["filing-readiness", "exceptions"]
+      "normativeSources": [
+        "SUNAT SIRE — R.S. 085-2020/SUNAT"
+      ],
+      "inputs": [
+        "sire-proposal",
+        "ledger",
+        "period"
+      ],
+      "outputs": [
+        "filing-readiness",
+        "exceptions"
+      ]
+    },
+    {
+      "id": "pe.conciliacion-bancaria",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "PCGE — Plan Contable General Empresarial (R. SMV 043-2010-SMV/01)",
+        "NIC 1 — Presentación de Estados Financieros",
+        "Código Tributario — D.S. 133-2013-EF"
+      ],
+      "inputs": [
+        "bank-statement",
+        "ledger",
+        "scope"
+      ],
+      "outputs": [
+        "differences",
+        "adjustments",
+        "reconciliation-report"
+      ]
+    },
+    {
+      "id": "pe.depreciacion-activo-fijo",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "PCGE — Plan Contable General Empresarial (R. SMV 043-2010-SMV/01)",
+        "LIR — Ley del Impuesto a la Renta (D.S. 179-2004-EF)"
+      ],
+      "inputs": [
+        "fixed-asset",
+        "policy",
+        "scope"
+      ],
+      "outputs": [
+        "depreciation-entries"
+      ]
+    },
+    {
+      "id": "pe.provision-cartera",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "PCGE — Plan Contable General Empresarial (R. SMV 043-2010-SMV/01)",
+        "LIR — Ley del Impuesto a la Renta (D.S. 179-2004-EF)",
+        "Código Tributario — D.S. 133-2013-EF"
+      ],
+      "inputs": [
+        "receivables",
+        "inventory",
+        "policy",
+        "scope"
+      ],
+      "outputs": [
+        "provision-entries"
+      ]
+    },
+    {
+      "id": "pe.isr-mensual",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "LIR — Ley del Impuesto a la Renta (D.S. 179-2004-EF), Art. 85"
+      ],
+      "inputs": [
+        "net-income",
+        "prior-year-ratio",
+        "scope"
+      ],
+      "outputs": [
+        "isr-entry",
+        "cedula"
+      ]
+    },
+    {
+      "id": "pe.cierre-resultados",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "PCGE — Plan Contable General Empresarial (R. SMV 043-2010-SMV/01)",
+        "NIC 1 — Presentación de Estados Financieros"
+      ],
+      "inputs": [
+        "result-balances",
+        "chart",
+        "scope"
+      ],
+      "outputs": [
+        "closing-entries"
+      ]
     }
   ]
 }
