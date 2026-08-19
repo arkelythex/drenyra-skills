@@ -21,10 +21,10 @@ Programming philosophy (content ≠ runtime):
 
 | Ecosystem project | Role | Status |
 | --- | --- | --- |
-| [Drenyra Command Center](https://github.com/arkelythex/drenyra-command-center) | Command Center (consumes) | In development (private) |
-| [Drenyra AI](https://github.com/arkelythex/drenyra-ai) | Verifiable core (consumes skills) | Pre-alpha |
+| [Drenyra Command Center](https://github.com/arkelythex/drenyra-command-center) | Command Center (consumes) | In development (public) |
+| [Drenyra AI](https://github.com/arkelythex/drenyra-ai) | Verifiable core (consumes skills) | Alpha (v0.5.0) |
 | [Drenyra Pi](https://github.com/arkelythex/drenyra-pi) | Pi-native harness (consumes, pinned) | Pre-alpha |
-| [Drenyra Engram](https://github.com/arkelythex/drenyra-engram) | Institutional memory (used) | Pre-alpha |
+| [Drenyra Engram](https://github.com/arkelythex/drenyra-engram) | Institutional memory (used) | Alpha (v0.2.1) |
 | **Drenyra Skills** | Versioned accounting, tax, and operational knowledge | **This repo** |
 | [Drenyra Guardian Angel](https://github.com/arkelythex/drenyra-guardian-angel) | Independent adversarial verification | In development |
 
