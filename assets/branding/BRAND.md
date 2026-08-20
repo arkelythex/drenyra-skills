@@ -20,8 +20,8 @@ The Drenyra Skills prompt is the **layered knowledge folios** motif:
 
 ```text
 Subject: layered knowledge folios with a curved spine. Focal point on the
-right third: three overlapping folio sheets (surfaces #12161B, #1A1F26,
-#20262E) whose spines curve outward like an open book, edges in cyan #3CE6D8
+right third: three overlapping folio sheets (surfaces #0A0A0A, #121212,
+#1A1A1A) whose spines curve outward like an open book, edges in cyan #3CE6D8
 and violet #9B7FE8. Each sheet carries a small abstract rule-glyph (a §-mark
 formed by a simple curve in muted blue-gray #A8B0BC) and a tiny spark sits at
 each glyph's curve tip. A version tag in success green #4ADE94 floats on the
