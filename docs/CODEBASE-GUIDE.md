@@ -19,7 +19,7 @@ skills/
   pe/                           Peruvian jurisdiction knowledge documents
     conciliacion-bancaria.md    Bank reconciliation knowledge (full doc)
     igv-validate.md             IGV validation knowledge (full doc)
-assets/branding/BRAND.md        Banner guide per the brand-system contract (v0.2)
+assets/branding/BRAND.md        Banner guide per the brand-system contract (v0.3)
 docs/                           Documentation (intended-usage, CODEBASE-GUIDE,
                                 architecture)
 LICENSE                         Proprietary, © Arkelythex

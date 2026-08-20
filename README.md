@@ -128,7 +128,7 @@ skills/                       versioned knowledge (the content)
   pe/                         Peruvian jurisdiction knowledge documents
     conciliacion-bancaria.md
     igv-validate.md
-assets/branding/BRAND.md      banner guide per the brand-system contract (v0.2)
+assets/branding/BRAND.md      banner guide per the brand-system contract (v0.3)
 LICENSE                       proprietary, © Arkelythex
 ```
 
