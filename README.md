@@ -5,6 +5,12 @@
 > [!IMPORTANT]
 > **Status: In development — public repository.** No released versions yet; content is versioned per skill through the registry manifest (`skills/registry.json`). This repository is **publicly visible** as part of the Drenyra ecosystem; use, copy, and distribution remain governed by the [LICENSE](LICENSE) (proprietary, © Arkelythex). Knowledge docs under `skills/pe/` are drafts from cited sources, pending domain review by a Peruvian accounting professional before normative use.
 
+<div align="center">
+
+<img width="1200" alt="Drenyra Skills — the normative skill catalog: id, version, jurisdiction, maxAutonomy, normative basis, pinned definition" src="assets/branding/drenyra-skills-hero-catalog.svg" />
+
+</div>
+
 ---
 
 ## Quick Start
@@ -48,6 +54,8 @@ bun run skills:conformance
 
 Eleven Peruvian (PE) skills are defined in the registry, each capped by a maximum autonomy tier (`maxAutonomy`): `R0`/`R1` run with controlled autonomy, `R2` requires explicit approval — the ceiling is a limit, never a grant. Two skills currently ship a long-form knowledge document under `skills/pe/` (marked ✓).
 
+<img width="1200" alt="Autonomy boundary — R0 → R1 → R2: a ceiling is a limit, never a grant; a skill may inform, constrain, cite and propose — never approve, authorize, bypass gates or rewrite history" src="assets/branding/drenyra-skills-autonomy-boundary.svg" />
+
 | Skill | Version | Max autonomy | Normative basis | Role |
 | --- | --- | --- | --- | --- |
 | `pe.igv-validate` ✓ | 1.0.0 | R1 | TUO IGV — D.S. 055-99-EF | Validates IGV treatment on an invoice (gravada / exonerada / inafecta, rate and base) |
@@ -73,9 +81,13 @@ One skill is one versioned knowledge document — content, not code. The templat
 Runtime-facing definitions live in the registry manifest: id, version, jurisdiction, `maxAutonomy`, `normativeSources`, `inputs`, `outputs` — the six fields the conformance gate pins against `drenyra-ai`.
 </details>
 
+<img width="1200" alt="Skill lifecycle — source → author → review → version → conformance → pin → consume: immutable in mission, versioned per skill, jurisdiction-scoped, rollback-able, no silent drift" src="assets/branding/drenyra-skills-lifecycle.svg" />
+
 ---
 
 ## Role in the ecosystem
+
+<img width="1200" alt="Policy supply chain — skills author → conformance gate → drenyra-ai validates and pins → consumers; content here, authority in the runtime" src="assets/branding/drenyra-skills-supply-chain.svg" />
 
 Drenyra Skills is the **content** layer of the Drenyra ecosystem. It follows the same split as Gentle-AI vs. its runtime: content and runtime are separate, versioned, and never coupled:
 

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="460" viewBox="0 0 1400 460">
+<rect width="1400" height="460" fill="#f3eadc"/>
+<text x="64" y="50" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="2.0">AUTHORITY MODEL</text>
+<text x="64" y="96" fill="#100c07" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="start" letter-spacing="0">A ceiling is a limit, never a grant</text>
+<text x="64" y="128" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">maxAutonomy bounds what an agent may propose. It never creates authority.</text>
+
+<!-- autonomy ladder -->
+<g transform="translate(80 180)">
+  <rect width="500" height="190" rx="14" fill="#fff7ea" stroke="#66513b"/>
+  <text x="24" y="32" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">MAX AUTONOMY</text>
+  <line x1="72" y1="142" x2="428" y2="142" stroke="#8a7358" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="120" cy="142" r="18" fill="#e6d7c4" stroke="#315b31" stroke-width="2"/><text x="120" y="147" fill="#315b31" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0">R0</text>
+  <circle cx="250" cy="142" r="18" fill="#e6d7c4" stroke="#0d4a68" stroke-width="2"/><text x="250" y="147" fill="#0d4a68" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0">R1</text>
+  <circle cx="380" cy="142" r="18" fill="#e6d7c4" stroke="#57478b" stroke-width="2"/><text x="380" y="147" fill="#57478b" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0">R2</text>
+  <text x="120" y="86" fill="#315b31" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">controlled</text>
+  <text x="250" y="86" fill="#0d4a68" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">bounded</text>
+  <text x="380" y="86" fill="#57478b" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">approval-gated</text>
+</g>
+
+<!-- policy vs authority -->
+<g transform="translate(700 180)">
+  <rect width="636" height="190" rx="14" fill="#decbb1" stroke="#66513b"/>
+  <text x="24" y="32" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">WHAT A SKILL CAN DO</text>
+  <text x="24" y="72" fill="#824f16" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">Inform</text>
+  <text x="160" y="72" fill="#0d4a68" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">Constrain</text>
+  <text x="326" y="72" fill="#315b31" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">Cite</text>
+  <text x="432" y="72" fill="#57478b" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">Propose</text>
+  <line x1="24" y1="98" x2="612" y2="98" stroke="#8a7358"/>
+  <text x="24" y="132" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">WHAT IT CANNOT DO</text>
+  <text x="24" y="164" fill="#842f24" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">approve · authorize · bypass gates · rewrite history</text>
+</g>
+
+<g transform="translate(64 406)">
+  <text x="0" y="0" fill="#554638" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="0.25">Final authority remains with the deterministic runtime gates and the human accountant.</text>
+</g>
+</svg>

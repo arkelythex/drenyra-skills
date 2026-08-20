@@ -19,14 +19,14 @@
 
 The canonical set lives in
 [`drenyra-ai/docs/assets/brand/gpt-image-prompts.md`](https://github.com/arkelythex/drenyra-ai/blob/main/docs/assets/brand/gpt-image-prompts.md).
-The Drenyra Skills prompt is the **layered folio system** motif:
+The Drenyra Skills prompt is the **normative skill catalog** motif:
 
 ```text
-Subject: versioned accounting and tax knowledge rendered as a layered folio system. The hero on the right third is a stack of three overlapping knowledge folios made of smoked glass and matte anthracite surfaces, each slightly offset, with curved spines that open outward in a refined arc. Their edges are traced with cyan and violet accent light, extremely restrained.
+Subject: versioned accounting and tax knowledge as a normative skill catalog. The hero on the right third is a single versioned skill ficha — a warm ivory document card (surface #FFF7EA on #F3EADC paper) with an editorial identity header: id, version, jurisdiction, maxAutonomy, and normative basis in dark ink #17120D, with the normative citations in cocoa #824F16. A sage #315B31 Pinned Definition seal stamps the corner.
 
-Each folio bears a tiny abstract rule-glyph — not a literal symbol, but a minimal curved compliance sigil — in muted blue-gray. A success-green version marker hovers above the top folio with a soft halo, like a sanctioned release state. A single sweeping orbit passes behind the stack, binding the layers together.
+Behind the card, a thin printed supply chain resolves like a timeline: source → author → review → version → conformance → pin → consume, in warm tan #DECBB1 with small node marks. Editorial, calm, audit-grade — a normative catalog entry, not a toolbox, not a marketplace card, not a dashboard tile.
 
-The object should feel like living doctrine under version control: elegant, ordered, and auditable. No open-book cliché, no school notebook vibe, no generic education iconography. Signature detail: the minute luminous point resting on the curve tip of the top sigil.
+Signature detail: the Pinned Definition seal engraving and the printed conformance timeline resolving under the ficha.
 ```
 
 ## Validate

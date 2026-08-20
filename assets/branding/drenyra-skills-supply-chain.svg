@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="460" viewBox="0 0 1400 460">
+<rect width="1400" height="460" fill="#f3eadc"/>
+<text x="64" y="50" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="2.0">POLICY SUPPLY CHAIN</text>
+<text x="64" y="96" fill="#100c07" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="start" letter-spacing="0">Content here. Validation in Drenyra AI.</text>
+<text x="64" y="128" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">The repositories stay decoupled; conformance keeps definitions in lockstep.</text>
+
+<!-- left content repo -->
+<g transform="translate(64 178)">
+  <rect width="330" height="190" rx="14" fill="#fff7ea" stroke="#66513b"/>
+  <text x="24" y="32" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">DRENYRA SKILLS</text>
+  <text x="24" y="68" fill="#100c07" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">Author</text>
+  <text x="24" y="102" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">skill documents</text>
+  <text x="24" y="126" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">registry.json</text>
+  <text x="24" y="150" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">normative sources</text>
+  <text x="24" y="176" fill="#824f16" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="start" letter-spacing="0">content — not code</text>
+</g>
+
+<!-- conformance gate -->
+<g transform="translate(470 272)">
+  <circle r="34" fill="#e6d7c4" stroke="#0d4a68" stroke-width="2"/>
+  <path d="M-12 0 L-3 9 L15 -12" fill="none" stroke="#0d4a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="0" y="55" fill="#0d4a68" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="1">CONFORMANCE</text>
+  <text x="0" y="72" fill="#554638" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="500" text-anchor="middle" letter-spacing="0">schema · checksum · signature</text>
+</g>
+
+<!-- runtime -->
+<g transform="translate(548 178)">
+  <rect width="390" height="190" rx="14" fill="#fff7ea" stroke="#66513b"/>
+  <text x="24" y="32" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">DRENYRA AI</text>
+  <text x="24" y="68" fill="#100c07" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">Validate + pin</text>
+  <text x="24" y="102" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">canonical definitions</text>
+  <text x="24" y="126" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">SHA-256 + Ed25519</text>
+  <text x="24" y="150" fill="#352e22" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">mission skill pinning</text>
+  <text x="24" y="176" fill="#315b31" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="start" letter-spacing="0">runtime authority lives here</text>
+</g>
+
+<!-- consumers -->
+<g transform="translate(1010 178)">
+  <rect width="326" height="190" rx="14" fill="#decbb1" stroke="#66513b"/>
+  <text x="24" y="32" fill="#725e4c" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.5">CONSUMERS</text>
+  <text x="24" y="68" fill="#100c07" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start" letter-spacing="0">Use pinned skills</text>
+  <text x="24" y="104" fill="#0d4a68" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">Drenyra Pi</text>
+  <text x="24" y="129" fill="#824f16" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">Command Center</text>
+  <text x="24" y="154" fill="#57478b" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">agents</text>
+  <text x="24" y="176" fill="#554638" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="500" text-anchor="start" letter-spacing="0">Engram may inform proposals</text>
+</g>
+
+<path d="M394 272 H436" stroke="#3e2f20" stroke-width="1.6"/>
+<path d="M504 272 H548" stroke="#3e2f20" stroke-width="1.6"/>
+<path d="M938 272 H1010" stroke="#3e2f20" stroke-width="1.6"/>
+</svg>
