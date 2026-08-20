@@ -4,31 +4,30 @@
 > [`drenyra-ai/contracts/brand-system.md`](https://github.com/arkelythex/drenyra-ai/blob/main/contracts/brand-system.md)
 > (v0.2 DRAFT) and canonical tokens at `contracts/brand-system/tokens.json`.
 >
-> The ecosystem design system is **the same system as Drenyra apps/web**: dark
-> + light themes and the cyan/violet accent system (DTCG token pipeline), with
-> the Dreamcoder-inspired compositional language (elevation, aurora glows,
-> curved geometry, spark accents). Drenyra Skills must **not** invent its own
-> palette — in either theme.
+> The ecosystem design system is **the same system as Drenyra apps/web**:
+> Black Dark OLED (pure `#000000`) + Dreamcoder Light (warm ivory) themes and
+> the cyan/violet accent system (DTCG token pipeline), with the Dreamcoder-
+> inspired compositional language (elevation, aurora glows, curved geometry,
+> spark accents). Drenyra Skills must **not** invent its own palette — in
+> either theme.
 
 ## Regeneration prompt (ChatGPT Images 2.0)
 
-> **Art direction (2026-08-11):** the Shared DNA block was upgraded to the premium minimal-maximal direction — see [creative-brief.md](https://github.com/arkelythex/drenyra-ai/blob/main/docs/assets/brand/creative-brief.md). Combine the product section below with the **current** Shared DNA from [gpt-image-prompts.md](https://github.com/arkelythex/drenyra-ai/blob/main/docs/assets/brand/gpt-image-prompts.md); the embedded prompt is the product section only and may trail the canonical file.
+> **Art direction (v2, Dreamcoder Light + Black Dark OLED):** see
+> [gpt-image-prompts.md](https://github.com/arkelythex/drenyra-ai/blob/main/docs/assets/brand/gpt-image-prompts.md).
+> Combine the Shared DNA block (section 4) with the product section below; the
+> embedded prompt is the product section only and may trail the canonical file.
 
 The canonical set lives in
 [`drenyra-ai/docs/assets/brand/gpt-image-prompts.md`](https://github.com/arkelythex/drenyra-ai/blob/main/docs/assets/brand/gpt-image-prompts.md).
-The Drenyra Skills prompt is the **layered knowledge folios** motif:
+The Drenyra Skills prompt is the **layered folio system** motif:
 
 ```text
-Subject: layered knowledge folios with a curved spine. Focal point on the
-right third: three overlapping folio sheets (surfaces #0A0A0A, #121212,
-#1A1A1A) whose spines curve outward like an open book, edges in cyan #3CE6D8
-and violet #9B7FE8. Each sheet carries a small abstract rule-glyph (a §-mark
-formed by a simple curve in muted blue-gray #A8B0BC) and a tiny spark sits at
-each glyph's curve tip. A version tag in success green #4ADE94 floats on the
-top folio with a soft halo. Composition: the folio stack as a calm hero, a
-single sweeping arc crossing behind it. Signature detail: the sigil's curve
-tip holds a point of light. Light variant (optional): sheets
-#FAFAF9/#FFFFFF/#F2F2F0, spines #2ECFC2 and #6B54A8, tag #1A8F52.
+Subject: versioned accounting and tax knowledge rendered as a layered folio system. The hero on the right third is a stack of three overlapping knowledge folios made of smoked glass and matte anthracite surfaces, each slightly offset, with curved spines that open outward in a refined arc. Their edges are traced with cyan and violet accent light, extremely restrained.
+
+Each folio bears a tiny abstract rule-glyph — not a literal symbol, but a minimal curved compliance sigil — in muted blue-gray. A success-green version marker hovers above the top folio with a soft halo, like a sanctioned release state. A single sweeping orbit passes behind the stack, binding the layers together.
+
+The object should feel like living doctrine under version control: elegant, ordered, and auditable. No open-book cliché, no school notebook vibe, no generic education iconography. Signature detail: the minute luminous point resting on the curve tip of the top sigil.
 ```
 
 ## Validate
