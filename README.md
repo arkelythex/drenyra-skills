@@ -75,10 +75,10 @@ Eleven Peruvian (PE) skills are defined in the registry, each capped by a maximu
 
 One skill is one versioned knowledge document — content, not code. The template (`skills/_template/skill.template.md`) defines the shape:
 
-- **Frontmatter** — id, version, domain, jurisdiction, title, scope (RUC/company/period where fiscal context applies), tags, effective dates, and normative sources.
+- **Frontmatter** — id, version, domain, jurisdiction, title, scope (RUC/company/period where fiscal context applies), tags, sources, and optional effective dates and output mappings.
 - **Body sections** — `Purpose`, `Rules` (each normative statement cites its source), `Operational steps` (deterministic, reviewable as candidates), and `References`.
 
-Runtime-facing definitions live in the registry manifest: id, version, jurisdiction, `maxAutonomy`, `normativeSources`, `inputs`, `outputs` — the six fields the conformance gate pins against `drenyra-ai`.
+Runtime-facing definitions live in the registry manifest. The six existing conformance fields remain `version`, `jurisdiction`, `maxAutonomy`, `normativeSources`, `inputs`, and `outputs`. Entries may also declare an optional skill-version `effective` window and cited `outputMappings` grouped under `pcge` or `xbrl`; these fields remain authoring-only until `drenyra-ai` runtime/conformance adopts them. Effective dates do not prove a law's validity, XBRL is not a SUNAT/legal requirement, and PCGE-to-XBRL equivalence is not automatic.
 </details>
 
 <img width="1200" alt="Skill lifecycle — source → author → review → version → conformance → pin → consume: immutable in mission, versioned per skill, jurisdiction-scoped, rollback-able, no silent drift" src="assets/branding/drenyra-skills-lifecycle.svg" />
@@ -126,8 +126,16 @@ skills/                       versioned knowledge (the content)
   registry.json               manifest — authoring source of truth
   registry.schema.json        manifest contract (JSON Schema draft-07)
   pe/                         Peruvian jurisdiction knowledge documents
+    bancarizacion-gate.md
     conciliacion-bancaria.md
     igv-validate.md
+    itf-justification.md
+    legacy-ingest.md
+    plame-provision.md
+    ple-export.md
+    sbs-exchange-rates.md
+    sire-adversarial.md
+    tax-shield.md
 assets/branding/BRAND.md      banner guide per the brand-system contract (v0.3)
 LICENSE                       proprietary, © Arkelythex
 ```

@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
+- **Optional validity and interoperability registry contracts** — backward-compatible `effective` skill-version windows and source-cited `outputMappings` grouped by PCGE and XBRL. Existing entries and the six conformance fields are unchanged; `drenyra-ai` must adopt the fields before consumers rely on them. `2026-08-27`
+- **8 new PE structural and silent skills** — added `pe.legacy-ingest`, `pe.tax-shield`, `pe.sire-adversarial`, `pe.itf-justification`, `pe.bancarizacion-gate`, `pe.sbs-exchange-rates`, `pe.ple-export`, and `pe.plame-provision` with full normative citations, BigInt integer cent precision, and manifest alignment in `skills/registry.json`. `2026-08-27`
 - **Skill registry manifest + first knowledge document** — `skills/registry.json` as the authoring source of truth for skill definitions and `skills/pe/igv-validate.md` as the first knowledge doc (slice 3 of the ecosystem cleanup). `2026-08-11`
 - **IGV validation knowledge** — `pe.igv-validate` rules drafted from cited official sources (TUO IGV — D.S. 055-99-EF), pending domain review. `2026-08-11`
 - **11 PE skill definitions synced with the `drenyra-ai` runtime** — registry grows to 11 skills (IGV, SIRE, detracciones, retenciones, percepciones, bank reconciliation, fixed-asset depreciation, portfolio provisions, monthly ISR, closing entries), plus the `pe.conciliacion-bancaria` knowledge document; `skills:conformance` PASS. `2026-08-16`

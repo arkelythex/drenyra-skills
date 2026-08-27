@@ -1,10 +1,51 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Drenyra Skills registry manifest",
-  "description": "Authoring source of truth for skill definitions. Conformance: drenyra-ai ships BASE_PE_SKILLS matching this manifest (ids, versions, jurisdiction, maxAutonomy, normativeSources, inputs, outputs); any drift fails CI.",
+  "description": "Authoring source of truth for skill definitions. Conformance: drenyra-ai ships BASE_PE_SKILLS matching this manifest (ids, versions, jurisdiction, maxAutonomy, normativeSources, inputs, outputs); any drift fails CI. Optional validity and interoperability metadata requires runtime adoption before consumers rely on it.",
   "type": "object",
   "additionalProperties": false,
   "required": ["description", "skills"],
+  "definitions": {
+    "sourceCitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "locator"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "uri": { "type": "string", "format": "uri" }
+      }
+    },
+    "pcgeOutputMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["output", "accountCode", "sourceCitation"],
+      "properties": {
+        "output": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact value from the containing skill's outputs array."
+        },
+        "accountCode": { "type": "string", "minLength": 1 },
+        "sourceCitation": { "$ref": "#/definitions/sourceCitation" }
+      }
+    },
+    "xbrlOutputMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["output", "taxonomy", "concept", "sourceCitation"],
+      "properties": {
+        "output": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact value from the containing skill's outputs array."
+        },
+        "taxonomy": { "type": "string", "minLength": 1 },
+        "concept": { "type": "string", "minLength": 1 },
+        "sourceCitation": { "$ref": "#/definitions/sourceCitation" }
+      }
+    }
+  },
   "properties": {
     "$schema": { "type": "string" },
     "description": { "type": "string" },
@@ -21,7 +62,40 @@
           "maxAutonomy": { "type": "string", "enum": ["R0", "R1", "R2", "R3"] },
           "normativeSources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
           "inputs": { "type": "array", "items": { "type": "string" } },
-          "outputs": { "type": "array", "items": { "type": "string" } }
+          "outputs": { "type": "array", "items": { "type": "string" } },
+          "effective": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from"],
+            "description": "Optional validity window for this skill version, not proof of the validity period of any law or source.",
+            "properties": {
+              "from": { "type": "string", "format": "date" },
+              "until": {
+                "anyOf": [
+                  { "type": "string", "format": "date" },
+                  { "type": "null" }
+                ]
+              }
+            }
+          },
+          "outputMappings": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "description": "Optional interoperability declarations. Each mapping must name an exact outputs value and a precise source citation; mappings do not establish legal requirements or automatic equivalence.",
+            "properties": {
+              "pcge": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "#/definitions/pcgeOutputMapping" }
+              },
+              "xbrl": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "#/definitions/xbrlOutputMapping" }
+              }
+            }
+          }
         }
       },
       "minItems": 1

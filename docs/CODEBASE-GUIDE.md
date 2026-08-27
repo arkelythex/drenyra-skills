@@ -14,11 +14,19 @@ skills/
   _template/skill.template.md   Authoring template + validation contract — start
                                 every new skill from here, never invent a shape
   registry.json                 Registry manifest — authoring source of truth for
-                                skill definitions (11 PE skills)
+                                skill definitions (19 PE skills)
   registry.schema.json          Manifest contract (JSON Schema draft-07)
   pe/                           Peruvian jurisdiction knowledge documents
+    bancarizacion-gate.md       Bancarization thresholds & anti-cash gate
     conciliacion-bancaria.md    Bank reconciliation knowledge (full doc)
     igv-validate.md             IGV validation knowledge (full doc)
+    itf-justification.md        ITF & unjustified equity increase defense
+    legacy-ingest.md            Legacy system report normalizer (CONCAR/SISCONT)
+    plame-provision.md          Labor provisions & PLAME drafts (CTS, Grati)
+    ple-export.md               PLE text file compiler & pipe layout
+    sbs-exchange-rates.md       Official SBS rates & exchange differences
+    sire-adversarial.md         SIRE adversarial reconciliation & pre-close
+    tax-shield.md               Principio de Causalidad & Art. 44 non-deductibles
 assets/branding/BRAND.md        Banner guide per the brand-system contract (v0.3)
 docs/                           Documentation (intended-usage, CODEBASE-GUIDE,
                                 architecture)
@@ -43,7 +51,7 @@ Rules that matter every day:
 
 1. **Content never imports runtime.** A skill is a document with a schema — no code, no imports, no logic. This repo never depends on `drenyra-ai` internals.
 2. **Runtime never depends on this repo.** `drenyra-ai` ships a self-contained copy (`BASE_PE_SKILLS`) and never reads this repo at runtime.
-3. **The conformance gate keeps them honest.** `scripts/skills-conformance.mjs` in `drenyra-ai` compares this manifest against the shipped runtime on six fields (`version`, `jurisdiction`, `maxAutonomy`, `normativeSources`, `inputs`, `outputs`); any drift fails CI (`skills-conformance` job).
+3. **The conformance gate keeps them honest.** `scripts/skills-conformance.mjs` in `drenyra-ai` compares this manifest against the shipped runtime on six fields (`version`, `jurisdiction`, `maxAutonomy`, `normativeSources`, `inputs`, `outputs`); any drift fails CI (`skills-conformance` job). Optional `effective` and `outputMappings` metadata remains authoring-only until the runtime and this gate explicitly adopt it.
 4. **Ecosystem direction.** Satellites consume published `drenyra-ai` contracts — never the reverse. Skills inform; they never authorize.
 5. **No reverse flow into content.** Runtime outcomes (receipts, ledger) never change what the knowledge says.
 
@@ -60,7 +68,7 @@ Rules that matter every day:
 | Branding assets | `assets/branding/BRAND.md` only | brand-conformance check in `drenyra-ai` (v0.2 palette) |
 | License | never — `LICENSE` is fixed | — |
 
-Every skill id, version, jurisdiction, `maxAutonomy`, `normativeSources`, `inputs`, and `outputs` in a document must match its `skills/registry.json` entry exactly.
+Every skill id, version, jurisdiction, `maxAutonomy`, `normativeSources`, `inputs`, and `outputs` in a document must match its `skills/registry.json` entry exactly. Optional `effective` windows and `outputMappings` must also match when declared. `effective` describes skill-version validity, not legal validity. Every PCGE or XBRL mapping must reference an exact declared output and cite its mapping source precisely; XBRL is not a SUNAT/legal requirement, and no automatic PCGE-to-XBRL equivalence is implied.
 
 ---
 
@@ -70,7 +78,7 @@ These are checked during review. A change is **not done** until all hold:
 
 - **Content is data.** No imports, no logic, no executable behavior in a skill.
 - **No fabricated fiscal rules.** Every normative statement cites its source (norm, article, runbook); unreviewed documents are explicitly marked as drafts pending domain review.
-- **Registry in lockstep.** The six conformance fields match the `drenyra-ai` runtime copy; `skills:conformance` passes.
+- **Registry in lockstep.** The six existing conformance fields remain unchanged and match the `drenyra-ai` runtime copy; `skills:conformance` passes. Consumers must not rely on optional `effective` or `outputMappings` until `drenyra-ai` runtime/conformance adopts them.
 - **Version discipline.** A normative change bumps the version in the document **and** in `registry.json` (semver). Skills are immutable during a mission — resolution at a historical date returns the version that was in force then (vigencia).
 - **Autonomy is a ceiling.** `maxAutonomy` (R0–R3) caps what an agent may propose; it never grants approval. `R2`/`R3` skills (e.g. `pe.sire-filing`) require explicit human approval in the runtime.
 - **Canonical shape stability.** The runtime hashes canonical (key-sorted) skill definitions (SHA-256 checksum) and verifies Ed25519-signed skill packs (SDD-070). Changing canonical fields casually breaks checksums and signatures.

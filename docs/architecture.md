@@ -48,10 +48,12 @@ Drenyra Skills is the **content layer** of the Drenyra ecosystem: versioned, jur
 
 A skill has two faces, both authored here and kept in lockstep:
 
-1. **The definition** — the machine contract in `skills/registry.json` (schema: `skills/registry.schema.json`, draft-07): `id`, `version`, `jurisdiction`, `maxAutonomy`, `normativeSources`, `inputs`, `outputs`.
-2. **The knowledge document** — `skills/<domain>/<jurisdiction>/<topic>.md` from the template: frontmatter (id, version, domain, jurisdiction, title, scope, tags, effective dates, sources) plus `Purpose`, `Rules` (cited), `Operational steps`, and `References`.
+1. **The definition** — the machine contract in `skills/registry.json` (schema: `skills/registry.schema.json`, draft-07): required `id`, the six existing conformance fields (`version`, `jurisdiction`, `maxAutonomy`, `normativeSources`, `inputs`, `outputs`), and optional `effective` and `outputMappings` metadata.
+2. **The knowledge document** — `skills/<domain>/<jurisdiction>/<topic>.md` from the template: frontmatter (id, version, domain, jurisdiction, title, scope, tags, optional effective dates and output mappings, sources) plus `Purpose`, `Rules` (cited), `Operational steps`, and `References`.
 
-At runtime (`drenyra-ai/skills/`), a definition is hashed over its canonical key-sorted JSON (SHA-256 checksum), optionally shipped in an Ed25519-signed skill pack, and bound into an immutable mission skill pin (`{id, version, checksum, jurisdiction, vigencia}`) — SDD-070. None of that machinery exists in this repo; it consumes nothing and ships nothing executable.
+`effective` is a skill-version validity window: `from` is required when the object is present, and `until` is an ISO date or `null`. It is not evidence of when a law or normative source is valid. `outputMappings` separates `pcge` account mappings from `xbrl` taxonomy-concept mappings. Every mapping names an exact declared output and includes a precise source citation. XBRL is interoperability metadata, not a SUNAT or legal requirement, and PCGE-to-XBRL equivalence is never inferred automatically.
+
+At runtime (`drenyra-ai/skills/`), a definition is hashed over its canonical key-sorted JSON (SHA-256 checksum), optionally shipped in an Ed25519-signed skill pack, and bound into an immutable mission skill pin (`{id, version, checksum, jurisdiction, vigencia}`) — SDD-070. None of that machinery exists in this repo; it consumes nothing and ships nothing executable. The optional metadata is authoring-only until `drenyra-ai` explicitly adopts it in its runtime model and conformance gate.
 
 ## Layer model
 
@@ -79,7 +81,7 @@ authority                         gates · approvals · receipts · human accoun
 
 - Consumers (`drenyra-ai`, agents) consume **versioned definitions** — the manifest and knowledge documents — never an unversioned checkout.
 - The runtime copy is self-contained: consumers never read this repo at runtime.
-- Conformance is the coordination surface: the gate pins the shipped copy to this authoring manifest.
+- Conformance is the coordination surface: the current gate pins the six existing fields to the shipped copy. `drenyra-ai` must adopt `effective` and `outputMappings` before consumers rely on them.
 - A skill declares its `inputs` and `outputs` so consumers can wire it into evidence and candidates; it declares `maxAutonomy` so the runtime applies the right review tier — but the skill itself never authorizes anything.
 
 ## Repository scope

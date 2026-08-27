@@ -88,9 +88,9 @@ These are the non-negotiable rules for every contribution. They are also enforce
 One skill is one versioned knowledge document. The template (`skills/_template/skill.template.md`) is the normative format; start from it — never invent a new shape.
 
 1. **Copy the template** to `skills/<domain>/<jurisdiction>/<topic>.md` (today: `skills/pe/<topic>.md`).
-2. **Fill the frontmatter:** `id`, `version` (`x.y.z`), `domain`, `jurisdiction`, `title` (imperative), `scope` (RUC/company/period where fiscal context applies — mandatory), `tags`, `effective` dates, and `sources`. Keep `version: 0.0.0`-style drafts honest until reviewed.
+2. **Fill the frontmatter:** `id`, `version` (`x.y.z`), `domain`, `jurisdiction`, `title` (imperative), `scope` (RUC/company/period where fiscal context applies — mandatory), `tags`, and `sources`. `effective` is optional; when present, it requires ISO `from` and permits ISO `until` or `null`. It describes this skill version's validity, not a law's validity. Keep `version: 0.0.0`-style drafts honest until reviewed.
 3. **Write the body:** `Purpose`, `Rules` (each rule is a normative statement **with its source**), `Operational steps` (deterministic, verifiable order, each step reviewable as a candidate), and `References`.
-4. **Register the definition** in `skills/registry.json`: id, version, jurisdiction, `maxAutonomy` (one of `R0`–`R3`), `normativeSources`, `inputs`, `outputs`. The entry must satisfy `skills/registry.schema.json` and match the document.
+4. **Register the definition** in `skills/registry.json`: id, version, jurisdiction, `maxAutonomy` (one of `R0`–`R3`), `normativeSources`, `inputs`, `outputs`, plus optional `effective` and `outputMappings`. Each PCGE or XBRL mapping must name an exact `outputs` item and provide a precise citation. XBRL is not a SUNAT/legal requirement, and PCGE-to-XBRL equivalence is not automatic. The entry must satisfy `skills/registry.schema.json` and match the document.
 5. **Validate** (see [Validation](#validation)) — including the `skills:conformance` gate in `drenyra-ai`, which fails on any drift between this manifest and the shipped runtime.
 6. **Document** the change in `CHANGELOG.md` under `[Unreleased]`.
 
@@ -141,7 +141,7 @@ Before opening a PR, run and report:
 | Check | Command | Failure means |
 | --- | --- | --- |
 | Manifest schema | `npx ajv-cli validate -s skills/registry.schema.json -d skills/registry.json` (or any draft-07 validator) | The registry entry violates the manifest contract |
-| Conformance | `bun run skills:conformance` (in a `drenyra-ai` checkout, sibling or `--manifest`) | The six conformance fields drift from the runtime copy |
+| Conformance | `bun run skills:conformance` (in a `drenyra-ai` checkout, sibling or `--manifest`) | The six conformance fields drift from the runtime copy; optional metadata is not consumer-ready until `drenyra-ai` adopts it |
 | Source citations | Manual review | A normative claim without a real source — rejected |
 
 Knowledge that changes fiscal behavior should also be reviewed by a domain professional (Peruvian accounting/tax) before it is treated as normative; unreviewed documents stay explicitly marked as drafts.
