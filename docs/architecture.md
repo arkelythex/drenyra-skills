@@ -6,6 +6,7 @@
 
 | Doc | What it covers | Read when |
 | --- | --- | --- |
+| [Documentation Standard](https://github.com/arkelythex/drenyra-ai/blob/main/docs/documentation-standard.md#5-diagrams) | Ecosystem documentation bar and the diagram convention | Writing or reviewing docs or diagrams |
 | [Intended Usage](intended-usage.md) | What this repo is and is not; the content vs. runtime frontier | Starting out — read this first |
 | [Codebase Guide](CODEBASE-GUIDE.md) | Repository map, layering, where changes go, invariants, validation | Navigating or changing the repo |
 | [README](../README.md) | Positioning, skills table, quick start | Consuming or discovering the repo |
