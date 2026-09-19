@@ -1,6 +1,7 @@
 <div align="center">
 
-<img width="1200" alt="Drenyra Skills flow — fiscal knowledge source → versioned skills → agent guidance → verified application boundary" src="assets/branding/drenyra-skills-flow-banner.svg" />
+<img width="1200" alt="Drenyra Skills flow — fiscal knowledge source → versioned skills → agent guidance → verified application boundary" src="assets/branding/drenyra-skills-flow-banner.light.svg#gh-light-mode-only" />
+<img width="1200" alt="Drenyra Skills flow — fiscal knowledge source → versioned skills → agent guidance → verified application boundary" src="assets/branding/drenyra-skills-flow-banner.dark.svg#gh-dark-mode-only" />
 
 <p><code>fiscal knowledge source → versioned skills → agent guidance → verified application boundary</code></p>
 
