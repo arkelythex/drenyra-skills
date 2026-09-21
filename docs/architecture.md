@@ -15,22 +15,13 @@
 
 Drenyra Skills is the **content layer** of the Drenyra ecosystem: versioned, jurisdiction-scoped fiscal knowledge (PE) that the `drenyra-ai` runtime validates and pins. Dependency direction follows the ecosystem rule — satellites consume the published `drenyra-ai` contracts, never the reverse:
 
-```text
-                    ┌──────────────────────────┐
-                    │ drenyra-ai (runtime)     │  Alpha v0.5.0 — verifiable core
-                    │ registry · checksum ·    │  registry, checksum (SHA-256),
-                    │ signature · pinning      │  signature (Ed25519), pinning
-                    └───────────▲──────────────┘
-                                │ consumes & validates · skills:conformance CI gate
-                    ┌───────────┴──────────────┐
-                    │ drenyra-skills (content) │  In development — this repo
-                    │ versioned knowledge (PE) │  never depends on runtime internals
-                    └──────────────────────────┘
-                                │ referenced by
-                    ┌───────────┴──────────────┐
-                    │ agents / missions        │  resolve skills at a date (vigencia)
-                    └──────────────────────────┘
-```
+![Drenyra Skills — Position in the Ecosystem](diagrams/drenyra-skills-position.architecture.light.svg#gh-light-mode-only)
+![Drenyra Skills — Position in the Ecosystem](diagrams/drenyra-skills-position.architecture.dark.svg#gh-dark-mode-only)
+
+`drenyra-skills` (content, this repo) is consumed & validated by `drenyra-ai`
+(runtime) — pinned via registry, checksum, and signature, gated by the
+`skills:conformance` CI check — and is in turn referenced by agents and
+missions, which resolve skills at a date (vigencia).
 
 **Direction of dependencies:** this repo never depends on `drenyra-ai` internals; `drenyra-ai` ships a self-contained runtime copy (`BASE_PE_SKILLS`) and never depends on this repo at runtime. The `skills:conformance` gate in `drenyra-ai` CI pins the two together — any drift between the authoring manifest and the shipped runtime fails the build.
 

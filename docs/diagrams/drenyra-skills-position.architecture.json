@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Drenyra Skills — Position in the Ecosystem",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/arkelythex/drenyra-skills",
+      "provider": "github",
+      "revision": "a6ae8617a302ad922353139f3676e9946324dddd"
+    }
+  },
+  "components": [
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "Drenyra AI (runtime)",
+      "sublabel": "registry, checksum, pinning",
+      "sources": [
+        { "path": "docs/architecture.md", "line": 18, "label": "position diagram" }
+      ],
+      "pos": [40, 140],
+      "size": [220, 120]
+    },
+    {
+      "id": "skills",
+      "type": "database",
+      "label": "Drenyra Skills",
+      "sublabel": "versioned knowledge (this repo)",
+      "sources": [
+        { "path": "skills/registry.json", "label": "registry" },
+        { "path": "skills/registry.schema.json", "label": "schema" },
+        { "path": "skills/_template/skill.template.md", "label": "authoring template" }
+      ],
+      "pos": [330, 140],
+      "size": [220, 120]
+    },
+    {
+      "id": "consumers",
+      "type": "external",
+      "label": "Agents / missions",
+      "sublabel": "resolve skills at a date (vigencia)",
+      "sources": [
+        { "path": "docs/architecture.md", "line": 27, "label": "referenced by" }
+      ],
+      "pos": [620, 140],
+      "size": [220, 120]
+    }
+  ],
+  "connections": [
+    { "from": "skills", "to": "runtime" },
+    { "from": "consumers", "to": "skills" }
+  ]
+}
