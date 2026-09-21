@@ -24,7 +24,7 @@
 
 ## Quick Start
 
-Drenyra Skills is a **content** repository — there is nothing to install. You read it to understand the knowledge the ecosystem runs on, or you author skills that the `drenyra-ai` runtime consumes.
+Drenyra Skills is a **content** repository — there is nothing to install. It is the separate specialized-skill catalog for Drenyra: you read it to understand the knowledge the ecosystem runs on, or author skills that the `drenyra-ai` runtime validates and pins for consumers. The bundled foundation/operator skills needed to run Pi live in [`drenyra-pi/skills/`](https://github.com/arkelythex/drenyra-pi/tree/main/skills).
 
 ### Inspect the skills
 
@@ -98,9 +98,10 @@ Runtime-facing definitions live in the registry manifest. The six existing confo
 
 <img width="1200" alt="Policy supply chain — skills author → conformance gate → drenyra-ai validates and pins → consumers; content here, authority in the runtime" src="assets/branding/drenyra-skills-supply-chain.svg" />
 
-Drenyra Skills is the **content** layer of the Drenyra ecosystem. It follows the same split as Gentle-AI vs. its runtime: content and runtime are separate, versioned, and never coupled:
+Drenyra Skills is the **specialized knowledge** layer of the Drenyra ecosystem. It takes inspiration from Gentle-AI's packaging model: stable core skills are bundled with the harness, while framework-, jurisdiction-, and practice-specific knowledge remains a separate, versioned catalog. Content and runtime are separate, versioned, and never coupled:
 
-- **The content lives here** — skills, rules, norms references, operational knowledge.
+- **The bundled foundation content lives in [`drenyra-pi/skills/`](https://github.com/arkelythex/drenyra-pi/tree/main/skills)** — scope, evidence, chains, review, safety, and Pi workflow guidance.
+- **The specialized knowledge lives here** — fiscal rules, jurisdictional content, normative references, and operational knowledge.
 - **The runtime lives in [`drenyra-ai/skills/`](https://github.com/arkelythex/drenyra-ai/tree/main/skills)** — registry, checksum (SHA-256 over canonical definitions), Ed25519 signature verification, and mission skill pinning (SDD-070).
 
 | Ecosystem project | Role | Status |
