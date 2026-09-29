@@ -1,0 +1,31 @@
+name: Content validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate registry schema
+        run: >-
+          npx --yes -p ajv-cli@5.0.0 -p ajv-formats@3.0.1 ajv validate
+          -s skills/registry.schema.json -d skills/registry.json --spec=draft7 -c ajv-formats
+      - name: Parse branding SVGs as XML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree
+
+          for svg in sorted(Path('assets/branding').rglob('*.svg')):
+              ElementTree.parse(svg)
+          PY
