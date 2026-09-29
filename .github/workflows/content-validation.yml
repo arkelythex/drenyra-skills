@@ -19,7 +19,13 @@ jobs:
       - name: Validate registry schema
         run: >-
           npx --yes -p ajv-cli@5.0.0 -p ajv-formats@3.0.1 ajv validate
-          -s skills/registry.schema.json -d skills/registry.json --spec=draft7 -c ajv-formats
+          -s skills/registry.schema.json -d skills/registry.json
+          --spec=draft7 -c ajv-formats
+      - name: Check local Markdown links and anchors
+        run: >-
+          git ls-files -z '*.md' | xargs -0 -r -n 1
+          npx --yes --package=markdown-link-check@3.13.7 markdown-link-check
+          --config .markdown-link-check.json --quiet
       - name: Parse branding SVGs as XML
         run: |
           python3 - <<'PY'
