@@ -199,6 +199,28 @@
       ]
     },
     {
+      "id": "pe.renta-anual",
+      "version": "1.0.0",
+      "jurisdiction": "PE",
+      "maxAutonomy": "R1",
+      "normativeSources": [
+        "LIR — Ley del Impuesto a la Renta (D.S. 179-2004-EF)",
+        "PCGE — Plan Contable General Empresarial (R. SMV 043-2010-SMV/01)"
+      ],
+      "inputs": [
+        "net-income-input",
+        "monthly-isr-cedulas",
+        "policy",
+        "scope"
+      ],
+      "outputs": [
+        "annual-isr",
+        "settlement",
+        "closing-entries",
+        "declaration-payload"
+      ]
+    },
+    {
       "id": "pe.legacy-ingest",
       "version": "1.0.0",
       "jurisdiction": "PE",

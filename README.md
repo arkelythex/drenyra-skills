@@ -1,3 +1,12 @@
+<div align="center">
+
+<img width="1200" alt="Drenyra Skills flow — fiscal knowledge source → versioned skills → agent guidance → verified application boundary" src="assets/branding/drenyra-skills-flow-banner.light.svg#gh-light-mode-only" />
+<img width="1200" alt="Drenyra Skills flow — fiscal knowledge source → versioned skills → agent guidance → verified application boundary" src="assets/branding/drenyra-skills-flow-banner.dark.svg#gh-dark-mode-only" />
+
+<p><code>fiscal knowledge source → versioned skills → agent guidance → verified application boundary</code></p>
+
+</div>
+
 # Drenyra Skills
 
 **Versioned accounting, tax, and operational knowledge for the Drenyra ecosystem — the content layer that agents consume and the `drenyra-ai` runtime validates and pins.** One source of truth for jurisdiction-scoped fiscal knowledge (Peru today): authored once, versioned per skill, and kept in conformance with the runtime that ships it.
