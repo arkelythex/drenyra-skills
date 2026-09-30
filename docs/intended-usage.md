@@ -50,7 +50,7 @@ It is the same split Gentle-AI applies between content and runtime, translated t
 | **Drenyra Skills** | Versioned accounting, tax, and operational knowledge (content) |
 | **Drenyra AI** | Runtime: registry, checksum, signature, pinning; validates and consumes skills (Alpha v0.5.0) |
 | **Drenyra Command Center** | Professional interface (consumes) |
-| **Drenyra Pi** | Pi-native harness (consumes, pinned) |
+| **Drenyra Shell** | Pi-native harness (consumes, pinned) |
 | **Drenyra Engram** | Institutional memory — informs, never authorizes |
 | **Drenyra Guardian Angel** | Independent, adversarial, continuous verification |
 | **Human accountant** | Final authority: reviews knowledge, approves actions |

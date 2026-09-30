@@ -78,4 +78,4 @@ authority                         gates · approvals · receipts · human accoun
 
 ## Repository scope
 
-This repo is the **content layer only**. It does **not** contain the runtime registry, checksum, signature, or pinning machinery (that is `drenyra-ai/skills/`), the product UI (that is `drenyra-command-center`), a Pi harness (that is `drenyra-pi`), a memory engine (that is `drenyra-engram`), or independent verification (that is `drenyra-guardian-angel`). It also does not contain the ERP, the books of record, or any SUNAT/bank integration — those connect through adapters and evidence, never through skills.
+This repo is the **content layer only**. It does **not** contain the runtime registry, checksum, signature, or pinning machinery (that is `drenyra-ai/skills/`), the product UI (that is `drenyra-command-center`), a Pi harness (that is `drenyra-shell`), a memory engine (that is `drenyra-engram`), or independent verification (that is `drenyra-guardian-angel`). It also does not contain the ERP, the books of record, or any SUNAT/bank integration — those connect through adapters and evidence, never through skills.

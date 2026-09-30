@@ -24,7 +24,7 @@
 
 ## Quick Start
 
-Drenyra Skills is a **content** repository — there is nothing to install. It is the separate specialized-skill catalog for Drenyra: you read it to understand the knowledge the ecosystem runs on, or author skills that the `drenyra-ai` runtime validates and pins for consumers. The bundled foundation/operator skills needed to run Pi live in [`drenyra-pi/skills/`](https://github.com/arkelythex/drenyra-pi/tree/main/skills).
+Drenyra Skills is a **content** repository — there is nothing to install. It is the separate specialized-skill catalog for Drenyra: you read it to understand the knowledge the ecosystem runs on, or author skills that the `drenyra-ai` runtime validates and pins for consumers. The bundled foundation/operator skills needed to run Pi live in [`drenyra-shell/skills/`](https://github.com/arkelythex/drenyra-shell/tree/main/skills).
 
 ### Inspect the skills
 
@@ -100,7 +100,7 @@ Runtime-facing definitions live in the registry manifest. The six existing confo
 
 Drenyra Skills is the **specialized knowledge** layer of the Drenyra ecosystem. It takes inspiration from Gentle-AI's packaging model: stable core skills are bundled with the harness, while framework-, jurisdiction-, and practice-specific knowledge remains a separate, versioned catalog. Content and runtime are separate, versioned, and never coupled:
 
-- **The bundled foundation content lives in [`drenyra-pi/skills/`](https://github.com/arkelythex/drenyra-pi/tree/main/skills)** — scope, evidence, chains, review, safety, and Pi workflow guidance.
+- **The bundled foundation content lives in [`drenyra-shell/skills/`](https://github.com/arkelythex/drenyra-shell/tree/main/skills)** — scope, evidence, chains, review, safety, and Pi workflow guidance.
 - **The specialized knowledge lives here** — fiscal rules, jurisdictional content, normative references, and operational knowledge.
 - **The runtime lives in [`drenyra-ai/skills/`](https://github.com/arkelythex/drenyra-ai/tree/main/skills)** — registry, checksum (SHA-256 over canonical definitions), Ed25519 signature verification, and mission skill pinning (SDD-070).
 
@@ -108,7 +108,7 @@ Drenyra Skills is the **specialized knowledge** layer of the Drenyra ecosystem. 
 | --- | --- | --- |
 | [Drenyra AI](https://github.com/arkelythex/drenyra-ai) | Verifiable core — runtime that validates and pins skills | Alpha (v0.5.0) |
 | [Drenyra Command Center](https://github.com/arkelythex/drenyra-command-center) | Command Center web application (consumes) | In development |
-| [Drenyra Pi](https://github.com/arkelythex/drenyra-pi) | Pi-native harness (consumes, pinned) | Pre-alpha |
+| [Drenyra Shell](https://github.com/arkelythex/drenyra-shell) | Pi-native harness (consumes, pinned) | Pre-alpha |
 | [Drenyra Engram](https://github.com/arkelythex/drenyra-engram) | Institutional memory — informs, never authorizes | Alpha (v0.2.1) |
 | **Drenyra Skills** | Versioned accounting, tax, and operational knowledge | **This repo — In development** |
 | [Drenyra Guardian Angel](https://github.com/arkelythex/drenyra-guardian-angel) | Independent, adversarial, continuous verification | In development |
