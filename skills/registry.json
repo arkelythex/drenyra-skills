@@ -4,18 +4,21 @@
   "skills": [
     {
       "id": "pe.igv-validate",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "jurisdiction": "PE",
       "maxAutonomy": "R1",
       "normativeSources": [
         "TUO IGV — D.S. 055-99-EF"
       ],
       "inputs": [
-        "invoice",
-        "tax-period"
+        "sales-lines",
+        "purchase-lines",
+        "policy",
+        "scope"
       ],
       "outputs": [
-        "igv-validation"
+        "igv-determination",
+        "exceptions"
       ]
     },
     {
