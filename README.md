@@ -107,7 +107,7 @@ Drenyra Skills is the **specialized knowledge** layer of the Drenyra ecosystem. 
 | Ecosystem project | Role | Status |
 | --- | --- | --- |
 | [Drenyra AI](https://github.com/arkelythex/drenyra-ai) | Verifiable core — runtime that validates and pins skills | Alpha (v0.5.0) |
-| [Drenyra Command Center](https://github.com/arkelythex/drenyra-command-center) | Command Center web application (consumes) | In development |
+| [Drenyra Desktop](https://github.com/arkelythex/drenyra-desktop) | Desktop web application (consumes) | In development |
 | [Drenyra Shell](https://github.com/arkelythex/drenyra-shell) | Pi-native harness (consumes, pinned) | Pre-alpha |
 | [Drenyra Engram](https://github.com/arkelythex/drenyra-engram) | Institutional memory — informs, never authorizes | Alpha (v0.2.1) |
 | **Drenyra Skills** | Versioned accounting, tax, and operational knowledge | **This repo — In development** |
