@@ -39,7 +39,7 @@ It is the same split Gentle-AI applies between content and runtime, translated t
 | Code | Skills are documents with a schema — no imports, no logic, no executable behavior |
 | The fiscal authority | Knowledge never approves, authorizes, or executes; professionals and gates decide |
 | Legal or tax advice | Knowledge cites sources but is not advice; unreviewed docs are explicitly drafts |
-| The ERP or the books of record | Those live in Drenyra Command Center and external systems |
+| The ERP or the books of record | Those live in Drenyra Console and external systems |
 | Institutional memory | That is Drenyra Engram — informs, never authorizes |
 | A privileged gateway to SUNAT/banks/ERPs | External systems connect through adapters and evidence, never through skills |
 
@@ -49,7 +49,7 @@ It is the same split Gentle-AI applies between content and runtime, translated t
 | --- | --- |
 | **Drenyra Skills** | Versioned accounting, tax, and operational knowledge (content) |
 | **Drenyra AI** | Runtime: registry, checksum, signature, pinning; validates and consumes skills (Alpha v0.5.0) |
-| **Drenyra Command Center** | Professional interface (consumes) |
+| **Drenyra Console** | Professional interface (consumes) |
 | **Drenyra Shell** | Pi-native harness (consumes, pinned) |
 | **Drenyra Engram** | Institutional memory — informs, never authorizes |
 | **Drenyra Guardian Angel** | Independent, adversarial, continuous verification |
